@@ -1,0 +1,59 @@
+package ru.sbt.java.school.step20;
+
+public class Test{
+	public int luckyNumber(int seed){
+		if(seed > 10) return seed%10;
+		int x = 0;
+		try{
+			if(seed%2 == 0) throw new Exception("No Even no.");
+			else return x;
+		}
+		catch(Exception e){
+			return 3;
+		}
+		finally{
+			return 7;
+		}
+	}
+	public static void main(String args[]){
+		int amount = 100, seed = 6;
+		switch( new Test().luckyNumber(6) ){
+			case 3: amount = amount * 2;
+			case 7: amount = amount * 2;
+			case 6: amount = amount + amount;
+			default :
+		}
+		System.out.println(amount);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//1. It will not compile.
+//2. It will throw an exception at runtime.
+//3. 800
+//4. 200
+//5. 400 +
